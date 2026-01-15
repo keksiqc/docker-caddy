@@ -17,9 +17,9 @@ env:
 
 # Jobs to run once the workflow is triggered
 jobs:
-  # Job to get image and repository details
+  # Job to get Image metadata
   metadata:
-    name: Get image and repository details
+    name: Get Image metadata
     runs-on: ubuntu-latest
 
     outputs:
@@ -50,9 +50,9 @@ jobs:
             org.opencontainers.image.title=${{ env.DOCKER_NAME }}
             org.opencontainers.image.description=${{ env.DOCKER_DESCRIPTION }}
 
-  # Job to build and publish Docker image
+  # Job to build and push Docker Image
   build:
-    name: Build and publish Docker image
+    name: Build and Push Docker Image
     runs-on: ubuntu-latest
     needs: metadata
 
