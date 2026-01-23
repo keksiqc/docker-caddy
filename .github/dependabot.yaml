@@ -8,8 +8,9 @@ updates:
     assignees:
       - "keksiqc"
 
-  # Check for Docker image updates
+  # Check for Dockerfile base image updates
   - package-ecosystem: "docker"
+    directory: "/"
     schedule:
       interval: "daily"
     assignees:
