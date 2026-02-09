@@ -7,7 +7,7 @@ permissions:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 2 * * *'  # runs at 02:00 every day
+    - cron: '0 2 * * 1'  # Runs at 02:00, only on Monday
   push:
     branches: main
     paths:
